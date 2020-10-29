@@ -1,0 +1,9 @@
+<suite name="SuiteName">
+	
+	<test name="DevOpsLoginTest Test" allow-return-values="true">
+		<classes>
+			<class name="com.hpe.toolsqa.DevOpsLoginTest" />
+		</classes>
+	</test>
+
+</suite>
