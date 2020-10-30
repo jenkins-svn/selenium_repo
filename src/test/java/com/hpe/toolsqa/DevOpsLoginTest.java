@@ -70,7 +70,7 @@ public class DevOpsLoginTest extends BaseTest{
 	@DataProvider(parallel=true)
 	public Object[][] getData(){
 		super.init();
-		xls = new Xls_Reader(envProp.getProperty("xlspath"));
+		xls = new Xls_Reader(System.getProperty("user.dir") + envProp.getProperty("xlspath"));
 		return DataUtil.getTestData(xls, testCaseName);
 	
 	}

@@ -26,6 +26,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 import com.hpe.toolsqa.ExtentManager;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -61,11 +62,11 @@ public class BaseTest {
 				//System.setProperty("webdriver.gecko.driver", prop.getProperty("geckodriver_exe"));
 				driver=new FirefoxDriver();
 			}else if(bType.equals("Chrome")){
-				System.setProperty("webdriver.chrome.driver", envProp.getProperty("chromedriver_exe"));
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+envProp.getProperty("chromedriver_exe"));
 				driver=new ChromeDriver();
 			}
 			else if (bType.equals("IE")){
-				System.setProperty("webdriver.ie.driver", envProp.getProperty("iedriver_exe"));
+				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+envProp.getProperty("iedriver_exe"));
 				driver= new InternetExplorerDriver();
 			}
 			
