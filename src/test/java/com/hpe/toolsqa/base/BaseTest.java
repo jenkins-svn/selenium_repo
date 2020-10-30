@@ -62,11 +62,11 @@ public class BaseTest {
 				//System.setProperty("webdriver.gecko.driver", prop.getProperty("geckodriver_exe"));
 				driver=new FirefoxDriver();
 			}else if(bType.equals("Chrome")){
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+envProp.getProperty("chromedriver_exe"));
+				System.setProperty("webdriver.chrome.driver", envProp.getProperty("chromedriver_exe"));
 				driver=new ChromeDriver();
 			}
 			else if (bType.equals("IE")){
-				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+envProp.getProperty("iedriver_exe"));
+				System.setProperty("webdriver.ie.driver", envProp.getProperty("iedriver_exe"));
 				driver= new InternetExplorerDriver();
 			}
 			
